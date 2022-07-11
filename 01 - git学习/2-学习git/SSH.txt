@@ -1,0 +1,46 @@
+1 - 查看是否已配置SSH
+	$  ls -al ~/.ssh               (包含隐藏位置)
+
+2 - 查看公钥
+	$  cat ~/.ssh/id_rsa.pub               (也可复制公钥)
+
+3 - 生成公钥
+	$  ssh-keygen -t rsa
+
+4 - 远程添加SSH公钥
+	去 gihub：
+	右上角下拉面板选择 Settings；
+	左侧选择 SSH and GPG keys；
+	点击 New SSH key；
+	随便起一个 title；
+	把公钥粘贴到下面。
+	可能会输入密码，
+	添加完成！
+
+5 - 确保ssh正在运行
+	$  eval
+	$  ssh-agent  -s                 (将ssh密钥添加到ssh-agent) 
+
+6 - 测试ssh连接
+	$ ssh -T git@github.com
+	yes
+	如果 XXX 是您的用户名，说明连接成功！
+
+7 - 添加ssh到账户
+	$ ssh-agent bash
+	$ ssh-add ~/.ssh/id_rsa
+
+8 - 检查当前的remote url
+	$ git remote -v
+ 	输出为http协议地址
+
+9 - 修改remote url 为 git 协议
+	在github仓库中，点code，选择SSH,复制连接
+	终端输入   $ git remote set-url origin  复制的连接
+
+
+
+10 -再 检查当前的远程URL
+	$ git remote -v
+                                        出现git通讯URL，成功！
+                                       可以开心的使用git了！

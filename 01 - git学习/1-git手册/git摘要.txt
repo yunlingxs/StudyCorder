@@ -1,0 +1,18 @@
+名字
+git - 愚蠢的内容跟踪器
+
+概要
+git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+    [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+    [-p|--paginate|-P|--no-pager] [--no-replace-objects] [--bare]
+    [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+    [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+    <command> [<args>]
+描述
+Git 是一个快速、可扩展的分布式版本控制系统，具有异常丰富的命令集，可提供高级操作和对内部的完全访问。
+
+参见 gittutorial[7] 开始，然后参阅 giteveryday[7]以获取有用的最小命令集。Git 用户手册有更深入的介绍。
+
+掌握基本概念后，可以返回此页面了解 Git 提供哪些命令。您可以使用“git 帮助命令”了解有关各个 Git 命令的更多信息。gitcli[7] 手册页给出了命令行命令语法的概述。
+
+可以在 https://git.github.io/htmldocs/git.html 或 https://git-scm.com/docs 查看最新 Git 文档的格式化和超链接副本。

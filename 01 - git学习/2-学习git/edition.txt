@@ -1,0 +1,8 @@
+版本回退(上一个版本)
+	$ git  reset --hard  HEAD^    
+
+获取版本号
+	$ git reflog 
+
+恢复指定版本
+	$ git reset --hard  7位版本号

@@ -1,0 +1,14 @@
+打开目录        
+           cd  <path>
+
+创建文件夹
+           mkdir  <floder name>       简写: mk  <floder name>
+
+显示当前目录
+          pwd
+
+创建文件
+          type nul>  <file name.后缀>                 【Windows】
+
+写入内容到文件
+         echo  "内容" >   <file name.后缀>

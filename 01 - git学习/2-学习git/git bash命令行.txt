@@ -1,0 +1,109 @@
+usage:  git config [<options>]    用法：git config[<options>]     
+	
+Config file location              配置文件位置        
+    --global              use global config file
+	--全局					使用全局配置文件
+    --system              use system config file
+	--系统					使用系统配置文件
+    --local               use repository config file
+	--本地					使用存储库配置文件
+    --worktree            use per-worktree config file
+	--每个工作树			配置文件的工作树使用
+    -f, --file <file>     use given config file
+	-f、 --文件<文件>		使用给定的配置文件
+    --blob <blob-id>      read config from given blob object
+	--blob 					从给定blob对象读取配置
+	
+Action								行动
+    --get                 get value: name [value-pattern]
+	--获取值				名称：[值模式]
+    --get-all             get all values: key [value-pattern]
+	--全部获取				全部值：键[值模式]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+	--获取正则表达式		获取regexp的值：name regex[值模式]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+	--获取URL匹配			获取特定于URL的值：节[.var]URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+	--全部替换				替换所有匹配变量：名称值[值模式]
+    --add                 add a new variable: name value
+	--添加					添加新变量：name value
+    --unset               remove a variable: name [value-pattern]
+	--取消设置				删除变量：名称[值模式]
+    --unset-all           remove all matches: name [value-pattern]
+	--全部取消设置			删除所有匹配项：名称[值模式]
+    --rename-section      rename section: old-name new-name
+	--重命名节				重命名节：旧名称 新名称
+    --remove-section      remove a section: name
+	--删除节				删除节：名称
+    -l, --list            list all
+    --列出全部              列出全部
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+	--固定值				将值与“值模式”进行比较时使用字符串相等
+    -e, --edit            open an editor
+	-e、 --编辑				打开编辑器
+    --get-color           find the color configured: slot [default]
+	--获取颜色				查找配置的颜色：插槽[默认]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+	--获取颜色设置			查找颜色设置：slot[标准输出为tty]
+
+Type								类型
+    -t, --type <type>     value is given this type
+	-t、 --类型<类型>		值给定此类型
+    --bool                value is "true" or "false"
+	--布尔值				为“真”或“假”
+    --int                 value is decimal number
+	--十进制值 				值是十进制数
+    --bool-or-int         value is --bool or --int
+	--						bool或int值为--bool或--int
+    --bool-or-str         value is --bool or string
+	--						bool或str值为--bool或string
+    --path                value is a path (file or directory name)
+	--路径值				值是路径（文件或目录名）
+    --expiry-date         value is an expiry date
+	--到期日期				值是到期日期
+Other								另外
+    -z, --null            terminate values with NUL byte
+	-z、--空				带NUL字节的null终止值
+    --name-only           show variable names only
+	--仅名称				仅显示变量名称
+    --includes            respect include directives on lookup
+	--在查找时				包含尊重include指令
+    --show-origin         show origin of config (file, standard input, blob, command line)
+	--显示原点				显示配置的原点（文件、标准输入、blob、命令行）
+    --show-scope          show scope of config (worktree, local, global, system, command)
+	--显示范围				显示配置的范围（工作树、本地、全局、系统、命令）
+    --default <value>     with --get, use default value when missing entry
+	--默认值				使用--get，在缺少条目时使用默认值
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

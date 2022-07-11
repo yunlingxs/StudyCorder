@@ -1,0 +1,13 @@
+进行使用前的基本全局配置：：
+	
+	# 设置全局用户名 
+		$ git config -- global user.name   "YOUR NAME "   
+	
+	# 设置邮箱
+		$ git config -- global user.name   "YOUR EMAIL " 
+		
+	--global 指定为全局配置
+	以上命令设置的信息会保存在。gitconfig文件中。
+	
+	# 查看配置信息
+		git config --list

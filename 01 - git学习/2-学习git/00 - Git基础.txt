@@ -1,0 +1,158 @@
+一、获取git仓库
+
+	1 - 在已存在目录中初始化仓库
+		$ cd  /c/user/my_project
+		之后： git init
+			- 现在我们的机器上有了： 一个真实项目的git仓库
+			- 并且，从这个仓库中检测出了所有文件的 工作副本
+		
+	2 - 克隆现有仓库
+		$ git clone <url>
+			git支持多种 数据传输协议
+				htpps://协议
+				git:// 协议
+				SSH 传输协议
+
+二、更新到仓库
+	
+	3 - 检查当前文件状态
+		$ git status
+			- 在Changs to be committed： 之下为 已暂存状态
+		$ git status -s
+			- 文件状态简览
+			-- ？？标记     未跟踪文件
+			-- A 标记       新添加到暂存区文件
+			-- M 标记       修改过的文件
+			
+	4 - 在项目下创建新文件
+		$ echo  'my_project'  >  file
+		
+	5 - 跟踪新文件
+		$ git add  <file> 
+			- 参数： 文件或目录的路径
+			- 已跟踪文件， 就是git已经知道的文件，在上一次快照中有它们的记录
+	
+	6 - 暂存已修改的文件
+		$ git add  <file> 
+			- git add 是多功能命令
+				开始跟踪新文件
+				把已跟踪的文件放到暂存区
+				合并时把有冲突的文件标记为已解决状态
+			将这个命令理解为： “精确的将内容添加到下一次提交中”	
+			
+	7 - 忽略文件
+		$ cat . gitignore
+			- 格式规范
+			- GitHub 有一个十分详细的针对数十种项目及语言的 .gitignore 文件列表， 你可以在https://github.com/github/gitignore 找到它。
+
+	8 - 具体查看已暂存和未暂存的修改
+		$ git diff
+			- 此命令比较 工作目录中当前文件和暂存区快照之间的差异
+		$ git diff -- staged  (或： -- cached)	
+			- 此命令比较 已暂存文件与最后一次提交的文件差异
+		git diff 系统支持的插件版本 ：   $ git difftoo --too-help 
+		
+	9 - 提交更新 
+		$ git commit 
+			- 这样会启动你选择的文本编辑器来输入提交说明
+			- 使用  $ git config --global core.editor  命令设置你喜欢的编辑器
+		$ git commit -a
+			- 跳过使用暂存区域，自动提交已跟踪文件
+		
+	10 - 移除暂存区文件
+		$ git rm
+		$ git rm -f   强制删除
+		
+	11 - 移动文件
+		$ git mv
+
+三、查看提交历史
+
+	12 - 回顾历史
+		$ git log
+		$ git log -p          每次提交所引入的差异
+		$ git log --stat      每次提交的简略统计信息
+		$ git log --pretty    使用不同于默认格式的方式展示提交历史
+		$ git log --pretty=format    定制记录的显示格式
+
+四、撤销操作
+
+	13 - 重新提交
+		$ git commit --amend
+		
+	14 - 取消暂存的文件
+		$ git reset HEAD <file>...
+		
+	15 - 撤销对文件的修改
+		$ git checkout -- <file>     注意！注意！注意！
+		
+五、使用远程仓库
+
+	16 -  查看远程仓库
+		$ git remote
+			远程仓库的本地默认名字：  origin
+		$ git remote -v  
+			显示远程仓库简写、 对应的 URL
+		
+	17 -  添加远程仓库
+		$ git remote add <shortname> <url> 
+		
+	18 -  从远程仓库中抓取与拉取
+		$ git fetch <remote>
+
+	19 -  推送到远程仓库
+			$ git push <remote> <branch>
+
+	20 -  查看某个远程仓库
+		$ git remote show  <remote>
+
+	21 -  远程仓库的重命名与移除
+		$ git remote rename <原名> <更改名>
+	
+六、打标签
+
+	22 - 列出标签
+		$ git tag
+		$ git tag -l    
+		$ git tag -l  "v1.0"
+		
+	23 - 创建标签
+		$ git tag
+		
+	24 - 附注标签 (annotated)
+			$ git tag  -a <标签名称>  -m <标签信息>
+			$ git show
+				- 查看信息
+				
+	25 - 轻量标签  (lightweight)
+		$ git tag  <标签名称>
+		
+	
+	26 - 后期打标签
+		$ git log --pretty=oneline      提交历史记录
+		$ git tag -a  <标签名称  哈希值前6位>
+	
+	27 - 共享标签
+		$ git push origin  <tagname>
+		$ git push origin  --tags      
+			-传送所有不在远程仓库服务器上的本地标签
+	
+	28 - 删除标签
+		-- delete  <tagname>
+		$ git push origin --delete <tagname>
+			- 删除远程标签
+	
+	29 - 检出标签
+		$ git checkout
+	
+七、别名
+		-即对git命令的简写
+			$ git config --global alias.co checkout
+			$ git config --global alias.br branch
+			$ git config --global alias.ci commit
+			$ git config --global alias.st status
+		使用别名	
+			$ git co
+			$ git br 
+			$ git ci 
+			$ git st 

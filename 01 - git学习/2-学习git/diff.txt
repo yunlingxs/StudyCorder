@@ -1,0 +1,1 @@
+查看指定文件差异更改  $ git diff <file name> 

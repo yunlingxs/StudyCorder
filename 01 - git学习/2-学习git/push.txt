@@ -1,0 +1,8 @@
+把本地库的内容推送到远程
+	$ git push origin master
+                $ git push -u origin master   (首次添加)
+                                  
+                                     origin       默认远程       
+                                     master     元仓库
+                                     -u           关联本地master 与远程master分支
+  
